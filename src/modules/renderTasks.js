@@ -1,6 +1,6 @@
 import { getTasks } from './localStorage.js';
 
-function renderTasks() {
+const renderTasks = () => {
   const list = document.querySelector('.list');
   list.innerHTML = '';
   getTasks().forEach((task) => {
@@ -34,6 +34,6 @@ function renderTasks() {
     }
     list.appendChild(listItem);
   });
-}
+};
 
 export default renderTasks;

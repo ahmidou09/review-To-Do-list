@@ -1,7 +1,7 @@
 import { getTasks, saveTasks } from './localStorage.js';
 import renderTasks from './renderTasks.js';
 
-function updateStatus(e) {
+const updateStatus = (e) => {
   const item = e.target.closest('.checkbox');
   if (item) {
     const index = +item.nextElementSibling.dataset.id;
@@ -15,9 +15,9 @@ function updateStatus(e) {
     saveTasks(tasks);
     renderTasks();
   }
-}
+};
 
-function clearCompletedTasks() {
+const clearCompletedTasks = () => {
   let tasks = getTasks();
   tasks = tasks.filter((task) => !task.completed);
   tasks.forEach((task, i) => {
@@ -25,6 +25,6 @@ function clearCompletedTasks() {
   });
   saveTasks(tasks);
   renderTasks();
-}
+};
 
 export { updateStatus, clearCompletedTasks };
