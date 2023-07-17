@@ -21,7 +21,7 @@ const renderTasks = () => {
     if (task.completed) {
       description.style.textDecoration = 'line-through';
       description.style.color = 'grey';
-      description.style.opacity = '.9';
+      description.style.opacity = '.8';
     }
     listItem.appendChild(description);
 
